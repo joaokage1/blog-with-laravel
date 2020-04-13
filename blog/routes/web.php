@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/contato/{id?}', function ($id = null) {
+    return "contato id = $id";
+});
+
+Route::post('/contato', function () {
+    dd($_POST);
+    return "contato POST";
+});
+
+Route::put('/contato', function () {
+
+    return "contato PUT";
+});

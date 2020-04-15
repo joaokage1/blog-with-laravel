@@ -7,7 +7,13 @@ use Illuminate\Http\Request;
 class ContatoController extends Controller
 {
     public function index(){
-        return "Esse é o index do contatoController";
+
+        $contatos = [
+            (object)["nome"=>"Toddy","tel"=>"991919111"],
+            (object)["nome"=>"JaqueToddy","tel"=>"9819191123"]
+        ];
+
+        return view('contato.index', compact('contatos'));
     }
 
     public function criar(Request $req){

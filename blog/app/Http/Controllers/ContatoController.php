@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use \App\Contato;
 
 class ContatoController extends Controller
 {
     public function index(){
 
+        $contato = new Contato();
+        //dd($contato -> lista());
+
         $contatos = [
-            (object)["nome"=>"Toddy","tel"=>"991919111"],
-            (object)["nome"=>"JaqueToddy","tel"=>"9819191123"]
+            $contato -> lista()
         ];
 
         return view('contato.index', compact('contatos'));

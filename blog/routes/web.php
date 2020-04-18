@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', ['as'=>'site.home', 'uses'=>'site\HomeController@index']);
 
 Route::get('/contato/{id?}', ['uses'=>'ContatoController@index']);
 

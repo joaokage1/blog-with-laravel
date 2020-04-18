@@ -24,7 +24,7 @@
           </ul>
         </div>
       </nav>
-      <ul class="sidenav" id="mobile">
+      <ul class="sidenav " data-target="mobile-demo">
           <li><a href="/">Home</a></li>
           <li><a href="{{route('admin.cursos')}}">Cursos</a></li>
       </ul>
